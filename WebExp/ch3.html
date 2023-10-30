@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>第三个移动端布局</title>
+		<style>
+			.container {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.block {
+				height: 200px;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.block:nth-child(odd) {
+				background-color: #04ffc0;
+			}
+
+			.block:nth-child(even) {
+				background-color: #04ff19;
+			}
+
+			@media (min-width: 600px) {
+				.container {
+					display: flex;
+					flex-direction: row;
+				}
+				.block {
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="block">块元素1</div>
+
+			<div class="block">块元素2</div>
+		</div>
+	</body>
+</html>

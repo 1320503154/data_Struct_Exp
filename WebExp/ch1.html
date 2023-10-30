@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<title>第一个传统布局</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				font-family: Arial, sans-serif;
+			}
+
+			.block {
+				width: 100%;
+				height: 300px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.block:nth-child(odd) {
+				background-color: #04ffc0;
+			}
+
+			.block:nth-child(even) {
+				background-color: #04ff19;
+			}
+
+			.content {
+				width: 600px;
+				height: 100%;
+				background-color: #ccc;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				background-color: black;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="block">
+			<div class="content">内容区1</div>
+		</div>
+
+		<div class="block">
+			<div class="content">内容区2</div>
+		</div>
+
+		<div class="block">
+			<div class="content">内容区3</div>
+		</div>
+	</body>
+</html>
